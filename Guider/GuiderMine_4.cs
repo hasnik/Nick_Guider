@@ -67,28 +67,28 @@ namespace Guider
             idHash[20] = urlSafeBase64EncodingMap[(idBytes[15] & 0xFC) >> 2];
 
             idHash[19] = urlSafeBase64EncodingMap[idBytes[14] & 0x3F];
-            idHash[18] = urlSafeBase64EncodingMap[((idBytes[13] << 2) & 0x3F) | (idBytes[14] >> 6)];
-            idHash[17] = urlSafeBase64EncodingMap[((idBytes[12] << 4) & 0x3F) | (idBytes[13] >> 4)];
+            idHash[18] = urlSafeBase64EncodingMap[(idBytes[13] << 2 & 0x3F) | (idBytes[14] >> 6)];
+            idHash[17] = urlSafeBase64EncodingMap[(idBytes[12] << 4 & 0x3F) | (idBytes[13] >> 4)];
             idHash[16] = urlSafeBase64EncodingMap[idBytes[12] >> 2];
 
             idHash[15] = urlSafeBase64EncodingMap[idBytes[11] & 0x3F];
-            idHash[14] = urlSafeBase64EncodingMap[((idBytes[10] << 2) & 0x3F) | (idBytes[11] >> 6)];
-            idHash[13] = urlSafeBase64EncodingMap[((idBytes[9] << 4) & 0x3F) | (idBytes[10] >> 4)];
+            idHash[14] = urlSafeBase64EncodingMap[(idBytes[10] << 2 & 0x3F) | (idBytes[11] >> 6)];
+            idHash[13] = urlSafeBase64EncodingMap[(idBytes[9] << 4 & 0x3F) | (idBytes[10] >> 4)];
             idHash[12] = urlSafeBase64EncodingMap[idBytes[9] >> 2];
 
             idHash[11] = urlSafeBase64EncodingMap[idBytes[8] & 0x3F];
-            idHash[10] = urlSafeBase64EncodingMap[((idBytes[7] << 2) & 0x3F) | (idBytes[8] >> 6)];
-            idHash[9] = urlSafeBase64EncodingMap[((idBytes[6] << 4) & 0x3F) | (idBytes[7] >> 4)];
+            idHash[10] = urlSafeBase64EncodingMap[(idBytes[7] << 2 & 0x3F) | (idBytes[8] >> 6)];
+            idHash[9] = urlSafeBase64EncodingMap[(idBytes[6] << 4 & 0x3F) | (idBytes[7] >> 4)];
             idHash[8] = urlSafeBase64EncodingMap[idBytes[6] >> 2];
 
             idHash[7] = urlSafeBase64EncodingMap[idBytes[5] & 0x3F];
-            idHash[6] = urlSafeBase64EncodingMap[((idBytes[4] << 2) & 0x3F) | (idBytes[5] >> 6)];
-            idHash[5] = urlSafeBase64EncodingMap[((idBytes[3] << 4) & 0x3F) | (idBytes[4] >> 4)];
+            idHash[6] = urlSafeBase64EncodingMap[(idBytes[4] << 2 & 0x3F) | (idBytes[5] >> 6)];
+            idHash[5] = urlSafeBase64EncodingMap[(idBytes[3] << 4 & 0x3F) | (idBytes[4] >> 4)];
             idHash[4] = urlSafeBase64EncodingMap[idBytes[3] >> 2];
 
             idHash[3] = urlSafeBase64EncodingMap[idBytes[2] & 0x3F];
-            idHash[2] = urlSafeBase64EncodingMap[((idBytes[1] << 2) & 0x3F) | (idBytes[2] >> 6)];
-            idHash[1] = urlSafeBase64EncodingMap[((idBytes[0] << 4) & 0x3F) | (idBytes[1] >> 4)];
+            idHash[2] = urlSafeBase64EncodingMap[(idBytes[1] << 2 & 0x3F) | (idBytes[2] >> 6)];
+            idHash[1] = urlSafeBase64EncodingMap[(idBytes[0] << 4 & 0x3F) | (idBytes[1] >> 4)];
             idHash[0] = urlSafeBase64EncodingMap[idBytes[0] >> 2];
 
             return new string(idHash);
