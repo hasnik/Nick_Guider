@@ -123,19 +123,19 @@ namespace Guider
 
             // Decode bytes [0-9] and 4 bits from byte 10
             var idBitsFrom0To63 = (urlSafeBase64DecodingMap[idHash[10]] & 0x3C) << 54
-                | (urlSafeBase64DecodingMap[idHash[9]] & 0xF) << 60
+                | (urlSafeBase64DecodingMap[idHash[9]] & 0x0F) << 60
                 | (urlSafeBase64DecodingMap[idHash[9]] & 0x30) << 44
                 | urlSafeBase64DecodingMap[idHash[8]] << 50
                 | urlSafeBase64DecodingMap[idHash[7]] << 40
-                | (urlSafeBase64DecodingMap[idHash[6]] & 0x3) << 46
+                | (urlSafeBase64DecodingMap[idHash[6]] & 0x03) << 46
                 | (urlSafeBase64DecodingMap[idHash[6]] & 0x3C) << 30
-                | (urlSafeBase64DecodingMap[idHash[5]] & 0xF) << 36
+                | (urlSafeBase64DecodingMap[idHash[5]] & 0x0F) << 36
                 | (urlSafeBase64DecodingMap[idHash[5]] & 0x30) << 20
                 | urlSafeBase64DecodingMap[idHash[4]] << 26
                 | urlSafeBase64DecodingMap[idHash[3]] << 16
-                | (urlSafeBase64DecodingMap[idHash[2]] & 0x3) << 22
+                | (urlSafeBase64DecodingMap[idHash[2]] & 0x03) << 22
                 | (urlSafeBase64DecodingMap[idHash[2]] & 0x3C) << 6
-                | (urlSafeBase64DecodingMap[idHash[1]] & 0xF) << 12
+                | (urlSafeBase64DecodingMap[idHash[1]] & 0x0F) << 12
                 | urlSafeBase64DecodingMap[idHash[1]] >> 4
                 | urlSafeBase64DecodingMap[idHash[0]] << 2;
 
